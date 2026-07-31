@@ -72,6 +72,7 @@ export default async function handler(req, res) {
         const message = `*🚨 طلب توصيل جديد (${invoiceCode}) 🚨*\n\n` +
                         `🏪 *المطعم:* ${restaurant ? restaurant.name : 'غير معروف'}\n` +
                         `📞 *هاتف الزبون:* ${order.customer_phone}\n` +
+                        ` *منطقة الزبون:* ${order.address}\n` +
                         `📝 *الملاحظات:* ${order.customer_notes || 'لا يوجد'}\n\n` +
                         `🛒 *الأطباق المطلوبة:*\n${itemsText}\n\n` +
                         `🚚 *أجور التوصيل:* ${order.total_delivery_fee} د.ع\n` +
